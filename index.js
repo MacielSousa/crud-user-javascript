@@ -1,2 +1,1 @@
-alert("Olá Mundo!");
-console.log("Teste");
+let userControllers = new UserControllers("form-user-create", "table-users");

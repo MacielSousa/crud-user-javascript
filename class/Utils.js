@@ -1,9 +1,12 @@
 class Utils{
 
     static dateFormat(date){
+        
+        //Colocando o zero a esquerda na data.
+        let dia = (((date.getDate()) < 10) ? '0'+date.getDate() : date.getDate());
+        let mes = ((date.getMonth()+10) < 10) ? ''+date.getMonth()+1 : date.getMonth()+1;
 
-        //console.log(date);
-        return date.getDate()+'/'+(date.getMonth()+1)+'/'+date.getFullYear()+' '+date.getHours()+":"+date.getMinutes();
+        return dia+'/'+mes+'/'+date.getFullYear()+' '+date.getHours()+":"+date.getMinutes();
 
     }
 

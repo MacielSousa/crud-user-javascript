@@ -8,6 +8,7 @@ class UserControllers{
 
         this.onSubmit();
         this.onEdition();
+        this.selectAll();
 
     }
 
@@ -103,6 +104,8 @@ class UserControllers{
                 (content) => {
 
                     values.photo = content;
+                    //Salvando objeto em uma Session Storage
+                    this.insert(values);
                     this.addLine(values);
                     btnSubmit.disabled = false;
                     this.formEl.reset();
@@ -212,9 +215,51 @@ class UserControllers{
 
     }
 
+    getUserStorage(){
+
+        let users = [];
+
+        if(sessionStorage.getItem("users")){
+
+            users = JSON.parse(sessionStorage.getItem("users"));
+
+        }
+
+        return users;
+
+    }
+
+    selectAll(){
+
+        let users = this.getUserStorage();
+
+        users.forEach(dataUser => {
+
+            let user = new User();
+            user.loadFromJSON(dataUser);
+
+            this.addLine(user);
+
+        });
+
+    }
+
+    insert(data){
+
+
+        let users = this.getUserStorage();
+
+        users.push(data);
+
+        sessionStorage.setItem("users", JSON.stringify(users));
+
+    }
+
     addLine(dataUser){
 
         let tr = document.createElement('tr');
+
+        
 
         //Guardando o Objeto em String em JSON
         tr.dataset.user = JSON.stringify(dataUser);
@@ -291,6 +336,7 @@ class UserControllers{
              this.showPanelUpdate();
  
          });
+
 
     }
 

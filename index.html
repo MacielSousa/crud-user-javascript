@@ -150,8 +150,8 @@
                     <th>Ações</th>
                   </tr>
                 </thead>
-                <tbody  id="table-users">
-
+                <tbody id="table-users">
+                  
                 </tbody>
               </table>
             </div>
@@ -168,9 +168,9 @@
               <!-- small box -->
               <div class="small-box bg-green">
                 <div class="inner">
-                  <h3 id="number-users">0</h3>
+                  <h3 id="number-users"></h3>
           
-                  <p>Usuários</p>
+                  <p>Novos Usuários</p>
                 </div>
                 <div class="icon">
                   <i class="ion ion-person-add"></i>
@@ -182,7 +182,7 @@
               <!-- small box -->
               <div class="small-box bg-yellow">
                 <div class="inner">
-                  <h3 id="number-users-admin">0</h3>
+                  <h3 id="number-users-admin"></h3>
           
                   <p>Administradores</p>
                 </div>
@@ -204,7 +204,7 @@
               <div class="box-body">
                 <div class="form-group">
                   <label for="exampleInputName">Nome</label>
-                  <input type="text" required class="form-control" id="exampleInputName" placeholder="Digite o nome do usuário" name="name">
+                  <input type="text" class="form-control" id="exampleInputName" placeholder="Digite o nome do usuário" name="name" required>
                 </div>
                 <div class="form-group">
                   <label>Gênero</label>
@@ -226,7 +226,7 @@
                 <div class="form-group">
                   <label for="exampleInputCountry">País</label>
                   <select class="form-control" id="exampleInputCountry" name="country">
-                    <option value=""  selected="selected" >Selecione um país</option>
+                    <option value="" selected="selected">Selecione um país</option>
                     <option value="United States">United States</option>
                     <option value="United Kingdom">United Kingdom</option>
                     <option value="Afghanistan">Afghanistan</option>
@@ -471,12 +471,12 @@
                   </select>
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputEmail1">E-mail</label>
-                  <input type="email" required class="form-control" id="exampleInputEmail" placeholder="Digite o e-mail" name="email">
+                  <label for="exampleInputEmail">E-mail</label>
+                  <input type="email" class="form-control" id="exampleInputEmail" placeholder="Digite o e-mail" name="email" required>
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Senha</label>
-                  <input type="password" required class="form-control" id="exampleInputPassword" placeholder="Crie uma senha" name="password">
+                  <label for="exampleInputPassword">Senha</label>
+                  <input type="password" class="form-control" id="exampleInputPassword" placeholder="Crie uma senha" name="password" required>
                 </div>
                 <div class="form-group">
                   <label for="exampleInputFile">Foto</label>
@@ -495,7 +495,7 @@
             </form>
           </div>
 
-          <div class="box box-primary" id="box-user-update" style="display: none;" id="">
+          <div class="box box-primary" style="display:none;" id="box-user-update">
             <div class="box-header with-border">
               <h3 class="box-title">Editar Usuário</h3>
             </div>
@@ -505,7 +505,7 @@
               <div class="box-body">
                 <div class="form-group">
                   <label for="exampleInputName">Nome</label>
-                  <input type="text" required class="form-control" id="exampleInputName" placeholder="Digite o nome do usuário" name="name">
+                  <input type="text" class="form-control" id="exampleInputName" placeholder="Digite o nome do usuário" name="name" required>
                 </div>
                 <div class="form-group">
                   <label>Gênero</label>
@@ -527,7 +527,7 @@
                 <div class="form-group">
                   <label for="exampleInputCountry">País</label>
                   <select class="form-control" id="exampleInputCountry" name="country">
-                    <option value=""  selected="selected" >Selecione um país</option>
+                    <option value="" selected="selected">Selecione um país</option>
                     <option value="United States">United States</option>
                     <option value="United Kingdom">United Kingdom</option>
                     <option value="Afghanistan">Afghanistan</option>
@@ -772,15 +772,15 @@
                   </select>
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputEmail1">E-mail</label>
-                  <input type="email" required class="form-control" id="exampleInputEmail" placeholder="Digite o e-mail" name="email">
+                  <label for="exampleInputEmail">E-mail</label>
+                  <input type="email" class="form-control" id="exampleInputEmail" placeholder="Digite o e-mail" name="email" required>
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Senha</label>
-                  <input type="password" required class="form-control" id="exampleInputPassword" placeholder="Crie uma senha" name="password">
+                  <label for="exampleInputPassword">Senha</label>
+                  <input type="password" class="form-control" id="exampleInputPassword" placeholder="Crie uma senha" name="password" required>
                 </div>
                 <div class="form-group">
-                  <img src="dist/img/boxed-bg.jpg" class="photo" style="max-height: 123px;">
+                  <img src="/dist/img/boxed-bg.jpg" class="photo" style="max-height: 120px;">
                   <label for="exampleInputFile">Foto</label>
                   <input type="file" id="exampleInputFile" name="photo">
                 </div>
@@ -793,10 +793,11 @@
               <!-- /.box-body -->          
               <div class="box-footer">
                 <button type="submit" class="btn btn-primary">Salvar</button>
-                <button type="submit" class="btn btn-default btn-cancel">Cancelar</button>
+                <button type="button" class="btn btn-default btn-cancel">Cancelar</button>
               </div>
             </form>
           </div>
+
 
         </div>
       </div>
